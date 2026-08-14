@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,8 +10,10 @@ public class Main {
         
         while (choice != 'Q'){
             //test for choice type and call appropriate Game
-            scanInput.nextLine();
-            choice = menu(scanInput);
+            if (choice == 'L')
+                Games.lotteryGame(scanInput);
+
+            //ask to play again?
             choice = 'Q';
         }
 
@@ -20,13 +21,21 @@ public class Main {
 
     }
 
-    public static char menu(Scanner input){
-        char choice = 'Z';
+    public static char menu(Scanner scanInput){
+        char choice = 'Q';
         String inputString;
+
+
 
         //menu loop
         //   print menu
-        //   get response & convert to upper case
+        
+        //   prompt user, get response & convert to upper case
+        System.out.print("What choice do you prefer: ");
+        inputString = scanInput.nextLine();
+        choice = inputString.toUpperCase().charAt(0);
+
+        //   verify that the choice is L, C or Q 
  
         return choice;
     }
