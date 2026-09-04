@@ -47,9 +47,11 @@ public class Games {
 
     public static void playCraps(Scanner input) {
         System.out.println("\nWELCOME TO CRAPS!!\n");
-        double netWorth = 50;
-          
-        System.out.println("Thanks for playing! You ended with $" + netWorth);
+
+
+
+
+        System.out.println("Thanks for playing!");
 
     }
 

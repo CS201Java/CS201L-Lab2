@@ -13,7 +13,7 @@ public class Main {
             if (choice == 'L')
                 Games.lotteryGame(scanInput);
 
-            //ask to play again?
+            //ask to play again? Show menu & get choice
             choice = 'Q';
         }
 
@@ -24,8 +24,6 @@ public class Main {
     public static char menu(Scanner scanInput){
         char choice = 'Q';
         String inputString;
-
-
 
         //menu loop
         //   print menu
